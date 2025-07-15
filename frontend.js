@@ -1,4 +1,5 @@
 async function initServiceWorker() {
+  // let swRegistration = await navigator.serviceWorker.register('https://andreinwald.github.io/webpush-ios-example/serviceworker.js', {scope: '/webpush-ios-example/'})
   let swRegistration = await navigator.serviceWorker.register(
     "https://anhdungit-09.github.io/push/serviceworker.js",
     { scope: "/push/" }
