@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <title>WebPush iOS example</title>
+    <title>Thông báo của Đình Dũng</title>
     <base href="https://anhdungit-09.github.io/push/" />
     <link rel="manifest" href="manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -73,25 +73,17 @@
 
       <div id="content">
         <div id="add-to-home-screen">
-          For WebPush work you may need to add this website to Home Screen at
-          your iPhone or iPad (window.navigator is not standalone).
-          <img
-            src="images/webpush-add-to-home-screen.jpg"
-            alt="webpush add to some screen"
-          />
-        </div>
-
-        <div id="scan-qr-code">
-          Open this page at your iPhone/iPad:
-          <img src="images/qrcode.png" alt="qrCode" /><br /><br />
+          Nếu là IPhone, bạn hãy thêm trang này vào màn hình chính của điện
+          thoại bằng cách nhấn vào nút <strong>Chia sẻ</strong> ở dưới cùng của
+          trình duyệt Safari và chọn <strong>Thêm vào Màn hình chính</strong>.
         </div>
 
         <button id="subscribe_btn" onclick="subscribeToPush()">
-          Subscribe to notifications
+          Đăng ký nhận thông báo
         </button>
 
         <div id="active_sub"></div>
-        <button id="test_send_btn" onclick="testSend()">Send test push</button>
+        <button id="test_send_btn" onclick="testSend()">Nhận thông báo</button>
       </div>
 
       <a id="source_link" href="https://anhdungit-09.github.io/push"

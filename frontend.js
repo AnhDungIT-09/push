@@ -78,9 +78,9 @@ function displaySubscriptionInfo(subscription) {
 }
 
 function testSend() {
-  const title = "Push title";
+  const title = "Đình Dũng thông báo";
   const options = {
-    body: "Additional text with some description",
+    body: "Đây là thông báo từ Đình Dũng",
     icon: "https://anhdungit-09.github.io/push/images/push_icon.jpg",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg/1920px-Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg",
@@ -96,7 +96,7 @@ function testSend() {
 
 if (new URLSearchParams(window.location.search).get("page") === "success") {
   document.getElementById("content").innerHTML =
-    "You successfully opened page from WebPush! (this url was that was set in json data param)";
+    "Đình Dũng cảm ơn bạn đã đăng ký nhận thông báo từ Đình Dũng. Bạn có thể đóng trang này.";
 }
 
 if (navigator.serviceWorker) {
