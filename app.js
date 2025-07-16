@@ -43,7 +43,7 @@ document
     if ("Notification" in window && Notification.permission === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
         registration.showNotification("Thông báo từ PWA!", {
-          body: 'Đây là 1 một thông báo thử nghiệm từ website của bạn, ngay cả khi nó "chạy ngầm"!',
+          body: 'Đây là một thông báo thử nghiệm từ website của bạn, ngay cả khi nó "chạy ngầm"!',
           icon: "icon-192x192.png",
           badge: "icon-192x192.png", // Chỉ hiển thị trên Android
           vibrate: [200, 100, 200],
