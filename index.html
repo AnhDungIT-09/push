@@ -1,92 +1,32 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
   <head>
-    <title>Thông báo của Đình Dũng</title>
-    <base href="https://anhdungit-09.github.io/push/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWA Nhắc Nhở Đơn Giản</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link rel="apple-touch-icon" href="images/favicon.png" />
-    <!-- needed for phone PWA app icon -->
-    <style>
-      body {
-        background-color: #cfc7e2;
-        font-family: Arial, sans-serif;
-        font-size: 18px;
-        padding-bottom: 50px;
-      }
-      .wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      @supports (-webkit-touch-callout: none) {
-        #scan-qr-code {
-          display: none;
-        }
-      }
-      #add-to-home-screen {
-        display: none;
-        background-color: bisque;
-        padding: 10px;
-      }
-      #add-to-home-screen img {
-        display: block;
-        margin: 0 auto;
-        padding-top: 10px;
-        max-height: 500px;
-        max-width: 100%;
-      }
-      #scan-qr-code img {
-        display: block;
-        max-width: 100%;
-      }
-      #subscribe_btn,
-      #test_send_btn {
-        display: none;
-        width: 100%;
-        line-height: 2;
-        font-size: 20px;
-        margin-top: 10px;
-      }
-      #active_sub {
-        display: none;
-        background-color: #e7e7ff;
-        padding: 20px;
-        word-wrap: break-word;
-      }
-      #source_link {
-        position: fixed;
-        bottom: 10px;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px;
-        left: 10px;
-      }
-    </style>
+    <link rel="apple-touch-icon" href="icon-192x192.png" />
+    <meta name="theme-color" content="#317EFB" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1>WebPush iOS example</h1>
+    <header>
+      <h1>PWA Nhắc Nhở</h1>
+    </header>
+    <main>
+      <p>
+        Đây là một PWA minh họa khả năng hoạt động ngoại tuyến và thông báo đẩy.
+      </p>
+      <button id="requestNotificationPermission">
+        Yêu cầu quyền thông báo
+      </button>
+      <button id="sendTestNotification">Gửi thông báo thử nghiệm</button>
+      <p>Thử ngắt kết nối mạng và làm mới trang để xem trang ngoại tuyến!</p>
+    </main>
+    <footer>
+      <p>&copy; 2025 PWA Mẫu</p>
+    </footer>
 
-      <div id="content">
-        <div id="add-to-home-screen">
-          Nếu là IPhone, bạn hãy thêm trang này vào màn hình chính của điện
-          thoại bằng cách nhấn vào nút <strong>Chia sẻ</strong> ở dưới cùng của
-          trình duyệt Safari và chọn <strong>Thêm vào Màn hình chính</strong>.
-        </div>
-
-        <button id="subscribe_btn" onclick="subscribeToPush()">
-          Đăng ký nhận thông báo
-        </button>
-
-        <div id="active_sub"></div>
-        <button id="test_send_btn" onclick="testSend()">Nhận thông báo</button>
-      </div>
-    </div>
-
-    <script src="frontend.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
