@@ -29,6 +29,7 @@ async function initServiceWorker() {
 }
 
 function isPushManagerActive(pushManager) {
+  console.log(window.navigator.standalone);
   if (!pushManager) {
     if (!window.navigator.standalone) {
       document.getElementById("add-to-home-screen").style.display = "block";
@@ -71,9 +72,6 @@ async function subscribeToPush() {
 function displaySubscriptionInfo(subscription) {
   document.getElementById("subscribe_btn").style.display = "none";
   document.getElementById("active_sub").style.display = "block";
-  //   document.getElementById("active_sub").innerHTML =
-  //     "<b>Active subscription:</b><br><br>" +
-  //     JSON.stringify(subscription.toJSON());
   document.getElementById("test_send_btn").style.display = "block";
 }
 
